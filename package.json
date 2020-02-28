@@ -1,7 +1,7 @@
 {
   "name": "project_12",
   "version": "0.0.1",
-  "description": "",
+  "description": "Backend for Mesto project, written on Express.js",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
