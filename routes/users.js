@@ -6,11 +6,14 @@ router.get("/users", (req, res) => {
 });
 
 router.get("/users/:id", (req, res) => {
-  if (!users[req.params.id]) {
+  const userToFind = users.find(item => {
+    return item._id === req.params.id;
+  });
+  if (!userToFind) {
     res.status(404).send({ message: "Нет пользователя с таким id" });
     return;
   }
-  res.send(users[req.params.id]);
+  res.send(userToFind);
 });
 
 module.exports = router;
